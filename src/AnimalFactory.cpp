@@ -1,6 +1,5 @@
 #include "AnimalFactory.h"
 
-
 std::unique_ptr<Animal> AnimalFactory::create(const std::string& type, const std::string& name, const Location& loc) {
 	auto it = AnimalFactory::getMap().find(type);
 	if (it == AnimalFactory::getMap().end())

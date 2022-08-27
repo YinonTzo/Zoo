@@ -2,13 +2,11 @@
 
 Animal::Animal(const std::string& name, const Location& location)
 	:m_location(location), m_name(name), m_stop(false),
-	m_direction(Directions::instance().drawDirection())
-{
+	m_direction(Directions::instance().drawDirection()){
 	//std::cout << "Animal c-tor\n";
 }
 
-Animal::~Animal()
-{
+Animal::~Animal(){
 	//std::cout << "Animal d-tor\n";
 }
 
@@ -43,7 +41,6 @@ void Animal::turnHorizontally() {
 		m_direction = Directions::direction::left;
 }
 
-
 bool Animal::getStop() const {
 	return m_stop;
 }
@@ -55,12 +52,15 @@ Location Animal::calculateSteps() const {
 void Animal::setDirection(Directions::direction&& direction) {
 	m_direction = direction;
 }
+
 void Animal::setNumOfSteps(int numofSteps) {
 	m_numOfSteps = numofSteps;
 }
+
 void Animal::setLocation(Location&& location) {
 	m_location = location;
 }
+
 std::string Animal::getName()const{
 	return m_name;
 }
@@ -68,6 +68,7 @@ std::string Animal::getName()const{
 bool Animal::checkHorizontalLimit(const Location& newLoc)const {
 	return (newLoc.m_col >= Location::m_maxCol || newLoc.m_col < 0);
 }
+
 bool Animal::checkVeticalLimit(const Location& newLoc)const {
 	return (newLoc.m_row >= Location::m_maxRow || newLoc.m_row < 0);
 }

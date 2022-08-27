@@ -1,14 +1,12 @@
 #include "Dog.h"
 
 Dog::Dog(const std::string& name, const Location& location)
-	:Animal(name, location)
-{
+	:Animal(name, location){
 	setNumOfSteps(3);
 	//std::cout << " Dog c-tor\n";
 }
 
-Dog::~Dog()
-{
+Dog::~Dog(){
 	//std::cout << " Dog d-tor\n";
 }
 

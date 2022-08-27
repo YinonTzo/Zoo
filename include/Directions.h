@@ -1,5 +1,4 @@
 #pragma once
-
 #include<unordered_map>
 #include "Location.h"
 
@@ -21,6 +20,7 @@ public:
 	direction drawDirection() const;
 
 private:
+
 	Directions();
 	~Directions() = default;
 	Directions(const Directions&) = default;

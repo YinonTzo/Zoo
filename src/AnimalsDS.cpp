@@ -1,6 +1,5 @@
 #include "AnimalsDS.h"
 #include "AnimalFactory.h"
-
 #include <typeinfo>
 #include <algorithm>
 #include <experimental/vector>
@@ -8,7 +7,6 @@
 Animal& AnimalsDS::operator[](size_t i) {
 	if (i < 0 || i >= m_animals.size())
 		std::cout << "Out of bounds\n";
-
 	return *m_animals[i].get();
 }
 

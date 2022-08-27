@@ -2,9 +2,7 @@
 #include "AnimalFactory.h"
 #include <typeinfo>
 
-
 void DelAllCommand::execute() {
-
 	std::string toDellete = "class ";
 	auto name = readType();
 	toDellete += name;

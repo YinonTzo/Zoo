@@ -1,5 +1,4 @@
 #pragma once
-
 #include<vector>
 #include "ActionsCommand.h"
 
@@ -11,5 +10,6 @@ public:
 	virtual void execute() override;
 
 private:
+
 	int readNumOfAnimal() const;
 };

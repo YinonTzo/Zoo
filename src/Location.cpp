@@ -1,33 +1,28 @@
 #include "Location.h"
 
-/*Draw Location*/
+/*Pic Location*/
 Location::Location():
 	Location(std::rand() % m_maxRow,
-	std::rand() % m_maxCol)
-{
+	std::rand() % m_maxCol){
 	//std::cout << "defult Location c-tor\n";
 }
 
 Location::Location(int row, int col)
-	:m_row(row), m_col(col)
-{
+	:m_row(row), m_col(col){
 	//std::cout << "row-col Location c-tor\n";
 }
 
 Location::Location(const Location& other)
-	:Location(other.m_row, m_col = other.m_col)
-{
+	:Location(other.m_row, m_col = other.m_col){
 	//std::cout << "copy Location c-tor\n";
 }
 
 Location::Location(Location&& other) noexcept
-	:Location(std::move(other.m_row), std::move(other.m_col))
-{
+	:Location(std::move(other.m_row), std::move(other.m_col)){
 	//std::cout << "move Location c-tor\n";
 }
 
-Location& Location::operator = (Location&& other)noexcept
-{
+Location& Location::operator = (Location&& other)noexcept{
 	//std::cout << "Location move assigment\n";
 	m_col = std::move(other.m_col);
 	m_row = std::move(other.m_row);
@@ -49,7 +44,6 @@ int Location::MaxRow() {
 }
 
 Location operator + (const Location& left, const Location& right){
-
 	return {(left.m_row + right.m_row),
 		(left.m_col + right.m_col)};
 }
@@ -59,7 +53,6 @@ Location& operator += (Location& left, const Location& right) {
 }
 
 Location operator * (const Location& other, int val) {
-	
 	return { (val * other.m_row),
 		(val * other.m_col) };
 }

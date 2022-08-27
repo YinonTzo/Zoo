@@ -1,6 +1,5 @@
 #include "MoveCommand.h"
 
-
 void MoveCommand::execute() {
 	int n = readNumOfAnimal();
 	m_animals[n].move();

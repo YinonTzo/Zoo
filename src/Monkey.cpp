@@ -1,15 +1,12 @@
 #include "Monkey.h"
 
-
 Monkey::Monkey(const std::string& name, const Location& location)
-	:Animal(name, location), m_maxTurns(5), m_maxSteps(2)
-{
+	:Animal(name, location), m_maxTurns(5), m_maxSteps(2){
 	setNumOfSteps(drawSteps());
 	//std::cout << " Monkey c-tor\n";
 }
 
-Monkey::~Monkey()
-{
+Monkey::~Monkey(){
 	//std::cout << " Monkey d-tor\n";
 }
 

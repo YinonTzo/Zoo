@@ -1,19 +1,16 @@
 #include "Lion.h"
 
 Lion::Lion(const std::string& name, const Location& location)
-	:Animal(name, location)
-{
+	:Animal(name, location){
 	setNumOfSteps(2);
 	//std::cout << " Lion c-tor\n";
 }
 
-Lion::~Lion()
-{
+Lion::~Lion(){
 	//std::cout << " Lion d-tor\n";
 }
 
 void Lion::step() {
-
 	if (!getStop()) {
 
 		Location newLoc = calculateSteps();

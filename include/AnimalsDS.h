@@ -1,10 +1,9 @@
 #pragma once
-
 #include <vector>
 #include "AnimalFactory.h"
 
-class AnimalsDS
-{
+class AnimalsDS{
+
 public:
 	
 	Animal& operator[](size_t i);

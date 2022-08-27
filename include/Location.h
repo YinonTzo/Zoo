@@ -4,6 +4,7 @@
 struct Location{
 
 public:
+
 	Location();
 	Location(int row, int col);
 	Location(const Location& other);

@@ -31,3 +31,6 @@
 *.out
 *.app
 /out
+
+# Another fils:
+old_README.docx

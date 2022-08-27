@@ -1,10 +1,8 @@
-﻿
-#include "Zoo.h"
+﻿#include "Zoo.h"
 #include <ctime>
 #include <cstdlib>
 
-int main()
-{	
+int main(){	
 	std::srand((unsigned int) std::time(nullptr));
 	Zoo z;
 	z.run();

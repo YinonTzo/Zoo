@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include <string>
-
 #include "Dog.h"
 #include "Command.h"
 #include "AnimalsDS.h"
@@ -14,6 +13,7 @@ public:
 	void run();
 
 private:
+
 	void add(const std::string&, std::unique_ptr<Command> command);
 	void show() const;
 	int getOptionFromUser() const;
